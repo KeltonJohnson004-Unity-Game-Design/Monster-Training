@@ -19,8 +19,12 @@ MonoBehaviour:
   speed: 0
   physicalDefense: 0
   elementalDefense: 0
+  magicDefense: 0
   physicalAttack: 0
   elementalAttack: 0
+  magicAttack: 0
+  availableAtTimeOfDay: 0100000002000000
+  availableDuringSeason: 01000000
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 698d9ea6bc8cade448ade8446d5e651d, type: 2}
     level: 1

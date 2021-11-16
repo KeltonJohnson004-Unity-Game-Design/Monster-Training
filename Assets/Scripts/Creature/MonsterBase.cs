@@ -23,6 +23,9 @@ public class MonsterBase : ScriptableObject
     [SerializeField] int elementalAttack;
     [SerializeField] int magicAttack;
 
+    [SerializeField] List<AvailableAtTimeOfDay> availableAtTimeOfDay;
+    [SerializeField] List<AvailableDuringSeason> availableDuringSeason;
+
     [SerializeField] List<LearnableMoves> learnableMoves;
 
 }
@@ -44,11 +47,30 @@ public class LearnableMoves
         get { return level; }
     }
 
+
 }
+
+
 
 public enum CreatureType
 {
     Physical,
     Elemental,
     Magic
+}
+
+public enum AvailableAtTimeOfDay
+{
+    Morning,
+    Day,
+    Evening,
+    Night
+}
+
+public enum AvailableDuringSeason
+{ 
+    Spring,
+    Summer,
+    Fall,
+    Winter
 }
