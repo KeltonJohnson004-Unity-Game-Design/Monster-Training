@@ -11,10 +11,10 @@ public class MonsterBase : ScriptableObject
 
     [SerializeField]
     CreatureType creatureType;
-    //public int MonsterType
-    //{
-    //    get { return creatureType; }
-    //}
+    public CreatureType MonsterType
+    {
+        get { return creatureType; }
+    }
 
     [TextArea]
     [SerializeField]
@@ -46,47 +46,47 @@ public class MonsterBase : ScriptableObject
     [SerializeField]
     List<LearnableMoves> learnableMoves;
 
-    //public string Name
-    //{
-    //    get { return name; }
-    //}
-    //public string Description
-    //{
-    //    get { return description; }
-    //}
-    //public string Maxhp
-    //{
-    //    get { return maxhp; }
-    //}
-    //public string Speed
-    //{
-    //    get { return speed; }
-    //}
-    //public string PhysicalDefense
-    //{
-    //    get { return physicaldefense; }
-    //}
-    //public string ElementalDefense
-    //{
-    //    get { return elementaldefense; }
-    //}
-    //public string MagicDefense
-    //{
-    //    get { return magicdefense; }
-    //}
-    //public string PhysicalAttack
-    //{
-    //    get { return physicalattack; }
-    //}
-    //public string ElementalAttack
-    //{
-    //    get { return elementalattack; }
-    //}
-    //public string MagicAttack
-    //{
-    //    get { return magicattack; }
-    //}
-
+    public string Name
+    {
+        get { return name; }
+    }
+    public string Description
+    {
+        get { return description; }
+    }
+    public int Maxhp
+    {
+        get { return maxHp; }
+    }
+    public int Speed
+    {
+        get { return speed; }
+    }
+    public int PhysicalDefense
+    {
+        get { return physicalDefense; }
+    }
+    public int ElementalDefense
+    {
+        get { return elementalDefense; }
+    }
+    public int MagicDefense
+    {
+        get { return magicDefense; }
+    }
+    public int PhysicalAttack
+    {
+        get { return physicalAttack; }
+    }
+    public int ElementalAttack
+    {
+        get { return elementalAttack; }
+    }
+    public int MagicAttack
+    {
+        get { return magicAttack; }
+    }
+}
 
 
 [System.Serializable]
@@ -136,4 +136,4 @@ public class MonsterBase : ScriptableObject
         Winter
     }
 
-}
+

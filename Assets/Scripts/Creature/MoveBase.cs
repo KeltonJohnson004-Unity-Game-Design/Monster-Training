@@ -7,6 +7,6 @@ public class MoveBase : ScriptableObject
 {
     [SerializeField] new string name;
 
-    [SerializeField] MonsterType moveType;
+    [SerializeField] CreatureType moveType;
 
 }

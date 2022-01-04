@@ -1,52 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
-public class monster : MonoBehaviour
+public class Monster : MonoBehaviour
 {
-    public MonsterBase Base { get; set; }
+    [SerializeField] MonsterBase _base;
+    public MonsterBase Base { get { return _base; } }
 
     public int Level { get; set; }
 
     public int HP { get; set; }
 
-    public monster(MonsterBase mBase, int mLevel)
+    public Monster(int mLevel, int maxHp)
     {
-        Base = mBase;
         Level = mLevel;
         HP = maxHp;
     }
+
+    public int physicalattack
+    {
+        get { return Mathf.FloorToInt((_base.PhysicalAttack * Level) / 100f) + 5; }
+    }
+    public int elementalattack
+    {
+        get { return Mathf.FloorToInt((_base.ElementalAttack * Level) / 100f) + 5; }
+    }
+    public int magicattack
+    {
+        get { return Mathf.FloorToInt((_base.MagicAttack * Level) / 100f) + 5; }
+    }
+    public int physicaldefense
+    {
+        get { return Mathf.FloorToInt((_base.PhysicalDefense * Level) / 100f) + 5; }
+    }
+    public int elementaldefense
+    {
+        get { return Mathf.FloorToInt((_base.PhysicalDefense * Level) / 100f) + 5; }
+    }
+    public int magicdefense
+    {
+        get { return Mathf.FloorToInt((_base.MagicDefense * Level) / 100f) + 5; }
+    }
+    public int speed
+    {
+        get { return Mathf.FloorToInt((_base.Speed * Level) / 100f) + 5; }
+    }
+    public int MaxHp
+    {
+        get { return Mathf.FloorToInt((_base.Maxhp * Level) / 100f) + 10; }
+    }
+
 }
-//    public int physicalattack
-//    {
-//        get { return mathf.floortoint((_base.physicalattack * level) / 100f) + 5; }
-//    }
-//    public int elementalattack
-//    {
-//        get { return mathf.floortoint((_base.elementalattack * level) / 100f) + 5; }
-//    }
-//    public int magicattack
-//    {
-//        get { return mathf.floortoint((_base.magicattack * level) / 100f) + 5; }
-//    }
-//    public int physicaldefense
-//    {
-//        get { return mathf.floortoint((_base.physicaldefense * level) / 100f) + 5; }
-//    }
-//    public int elementaldefense
-//    {
-//        get { return mathf.floortoint((_base.physicaldefense * level) / 100f) + 5; }
-//    }
-//    public int magicdefense
-//    {
-//        get { return mathf.floortoint((_base.magicdefense * level) / 100f) + 5; }
-//    }
-//    public int speed
-//    {
-//        get { return mathf.floortoint((_base.speed * level) / 100f) + 5; }
-//    }
-//    public int maxhp
-//    {
-//        get { return mathf.floortoint((_base.maxhp * level) / 100f) + 10; }
-//    }
-//}
+
